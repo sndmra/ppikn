@@ -182,20 +182,20 @@ const KPICard = React.memo(({ title, value, icon: Icon, colorClass, onClick }) =
 const Header = ({ t, lang, setLang, onRefresh, isRefreshing }) => (
   <header className="mb-10 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-4 transition-all">
     <div className="flex items-center gap-4">
-      <img src="/logoiknnotext.png" alt="IKN Logo" className="w-16 h-16 object-contain" />
+      <img src="/logoiknnotext.png" alt="IKN Logo" className="w-16 h-16 object-contain" width="64" height="64" />
       <div>
         <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight">{t.title}</h1>
         <p className="text-lg text-slate-500 mt-1">{t.subtitle}</p>
       </div>
     </div>
     <div className="flex items-center gap-4">
-      <button onClick={onRefresh} disabled={isRefreshing} className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-all shadow-sm active:scale-95 disabled:opacity-50 cursor-pointer">
+      <button onClick={onRefresh} disabled={isRefreshing} aria-label={t.refresh} className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50 transition-all shadow-sm active:scale-95 disabled:opacity-50 cursor-pointer">
         <RefreshCcw className={`w-4 h-4 text-indigo-600 ${isRefreshing ? 'animate-spin' : ''}`} />
         {t.refresh}
       </button>
-      <div className="flex items-center bg-white border border-slate-200 rounded-lg p-1">
+      <div className="flex items-center bg-white border border-slate-200 rounded-lg p-1" role="group" aria-label="Language Selector">
         {['en', 'id'].map((l) => (
-          <button key={l} onClick={() => setLang(l)} className={`px-3 py-1 rounded-md text-sm font-medium transition-all cursor-pointer ${lang === l ? 'bg-indigo-600 text-white shadow-sm' : 'text-slate-500 hover:text-slate-900'}`}>{l.toUpperCase()}</button>
+          <button key={l} onClick={() => setLang(l)} aria-label={`Switch to ${l.toUpperCase()}`} className={`px-3 py-1 rounded-md text-sm font-medium transition-all cursor-pointer ${lang === l ? 'bg-indigo-600 text-white shadow-sm' : 'text-slate-500 hover:text-slate-900'}`}>{l.toUpperCase()}</button>
         ))}
       </div>
     </div>
