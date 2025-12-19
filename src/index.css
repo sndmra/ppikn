@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-200: #bae6fd;
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  --color-primary-800: #075985;
+  --color-primary-900: #0c4a6e;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.card {
+  @apply bg-white border border-slate-200 rounded-xl shadow-sm p-6;
+}
+
+.kpi-card {
+  @apply bg-white border border-slate-200 rounded-lg p-4 shadow-sm flex flex-col;
+}
+
+/* Scroll Reveal & Parallax Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays */
+.reveal-delay-100 {
+  transition-delay: 100ms;
+}
+
+.reveal-delay-200 {
+  transition-delay: 200ms;
+}
+
+.reveal-delay-300 {
+  transition-delay: 300ms;
+}
+
+.reveal-delay-400 {
+  transition-delay: 400ms;
+}
+
+.reveal-delay-500 {
+  transition-delay: 500ms;
+}
+
+/* Parallax effect on scroll entry */
+.parallax-sm {
+  transform: translateY(20px);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.visible .parallax-sm {
+  transform: translateY(0);
+}

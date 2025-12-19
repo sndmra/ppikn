@@ -1,0 +1,250 @@
+{
+    "summary": {
+        "total_population": 147427,
+        "total_households": 43293,
+        "avg_household_size": 3.41,
+        "dependency_ratio": 47.25,
+        "aging_index": 17.92,
+        "sex_ratio": 106.33,
+        "overall_sex_ratio": 106.33,
+        "hotspots": 2,
+        "desa_core": 46,
+        "top_villages": [
+            "Muara Jawa Ulu",
+            "Muara Jawa Pesisir"
+        ]
+    },
+    "villages": [
+        {
+            "name": "Muara Jawa Ulu",
+            "pop": 11861,
+            "lat": -0.814,
+            "lng": 117.233
+        },
+        {
+            "name": "Muara Jawa Pesisir",
+            "pop": 11042,
+            "lat": -0.828,
+            "lng": 117.238
+        },
+        {
+            "name": "Karya Merdeka",
+            "pop": 7058,
+            "lat": -0.995,
+            "lng": 117.035
+        },
+        {
+            "name": "Sungai Merdeka",
+            "pop": 6704,
+            "lat": -1.015,
+            "lng": 117.015
+        },
+        {
+            "name": "Samboja Kuala",
+            "pop": 6438,
+            "lat": -0.875,
+            "lng": 117.375
+        },
+        {
+            "name": "Muara Jawa Tengah",
+            "pop": 5469,
+            "lat": -0.842,
+            "lng": 117.23
+        },
+        {
+            "name": "Sanipah",
+            "pop": 4959,
+            "lat": -0.97,
+            "lng": 117.153
+        },
+        {
+            "name": "Bukit Merdeka",
+            "pop": 4687,
+            "lat": -0.982,
+            "lng": 117.052
+        },
+        {
+            "name": "Suka Raja",
+            "pop": 4454,
+            "lat": -0.918,
+            "lng": 116.834
+        },
+        {
+            "name": "Teluk Pemedas",
+            "pop": 4417,
+            "lat": -0.885,
+            "lng": 117.285
+        },
+        {
+            "name": "Batuah",
+            "pop": 4331,
+            "lat": -0.73,
+            "lng": 117.125
+        },
+        {
+            "name": "Sungai Seluang",
+            "pop": 3994,
+            "lat": -0.942,
+            "lng": 117.185
+        },
+        {
+            "name": "Tengin Baru",
+            "pop": 3967,
+            "lat": -0.911,
+            "lng": 116.83
+        },
+        {
+            "name": "Handil Baru",
+            "pop": 3793,
+            "lat": -0.92,
+            "lng": 117.175
+        },
+        {
+            "name": "Bumi Harapan",
+            "pop": 3653,
+            "lat": -0.952,
+            "lng": 116.745
+        },
+        {
+            "name": "Muara Jawa Ilir",
+            "pop": 3546,
+            "lat": -0.855,
+            "lng": 117.218
+        },
+        {
+            "name": "Argo Mulyo",
+            "pop": 3177,
+            "lat": -0.925,
+            "lng": 116.845
+        },
+        {
+            "name": "Semoi Dua",
+            "pop": 3162,
+            "lat": -0.955,
+            "lng": 116.905
+        },
+        {
+            "name": "Bukit Raya",
+            "pop": 3030,
+            "lat": -0.965,
+            "lng": 116.855
+        },
+        {
+            "name": "Telemow",
+            "pop": 2735,
+            "lat": -1.035,
+            "lng": 116.725
+        }
+    ],
+    "ageLabels": [
+        "0-4",
+        "5-9",
+        "10-14",
+        "15-19",
+        "20-24",
+        "25-29",
+        "30-34",
+        "35-39",
+        "40-44",
+        "45-49",
+        "50-54",
+        "55-59",
+        "60-64",
+        "65-69",
+        "70-74",
+        "75-79",
+        "80-84",
+        "85-89",
+        "90-94",
+        "95-99",
+        "100-104",
+        "105-109",
+        "110-114"
+    ],
+    "ageData": {
+        "male": [
+            5756,
+            7221,
+            7859,
+            7096,
+            6154,
+            5530,
+            4988,
+            5127,
+            6018,
+            5638,
+            4519,
+            3661,
+            2660,
+            1865,
+            1112,
+            444,
+            208,
+            67,
+            37,
+            13,
+            1,
+            0,
+            0
+        ],
+        "female": [
+            5312,
+            6806,
+            7165,
+            6246,
+            5457,
+            5365,
+            5135,
+            5502,
+            5973,
+            5084,
+            4213,
+            3379,
+            2375,
+            1645,
+            876,
+            518,
+            219,
+            108,
+            59,
+            12,
+            1,
+            1,
+            2
+        ]
+    },
+    "jobs": [
+        {
+            "nama_jenis_pekerjaan": "Perdagangan besar dan eceran, reparasi dan perawatan mobil dan sepeda motor",
+            "jumlah": 8262
+        },
+        {
+            "nama_jenis_pekerjaan": "Perkebunan",
+            "jumlah": 8044
+        },
+        {
+            "nama_jenis_pekerjaan": "Pertambangan dan penggalian",
+            "jumlah": 7908
+        },
+        {
+            "nama_jenis_pekerjaan": "Konstruksi",
+            "jumlah": 5093
+        },
+        {
+            "nama_jenis_pekerjaan": "Penyediaan akomodasi dan penyediaan makan minum",
+            "jumlah": 4645
+        },
+        {
+            "nama_jenis_pekerjaan": "Industri pengolahan",
+            "jumlah": 2978
+        },
+        {
+            "nama_jenis_pekerjaan": "Pendidikan",
+            "jumlah": 2780
+        },
+        {
+            "nama_jenis_pekerjaan": "Administrasi pemerintahan, pertahanan, dan jaminan sosial wajib",
+            "jumlah": 2375
+        }
+    ]
+}
