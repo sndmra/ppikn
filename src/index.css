@@ -19,12 +19,11 @@
   font-weight: 400;
   background-color: #f8fafc;
   color: #1e293b;
+  scrollbar-gutter: stable;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-content: center;
   min-width: 320px;
   min-height: 100vh;
 }

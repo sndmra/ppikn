@@ -178,6 +178,23 @@
             "lng": 116.725
         }
     ],
+    "hierarchical": {
+        "regencies": {
+            "KAB. KUTAI KARTANEGARA": 111918,
+            "KAB. PENAJAM PASER UTARA": 35509
+        },
+        "districts": {
+            "KAB. KUTAI KARTANEGARA": {
+                "LOA JANAN": 6402,
+                "MUARA JAWA": 35184,
+                "SAMBOJA": 39961,
+                "SAMBOJA BARAT": 30371
+            },
+            "KAB. PENAJAM PASER UTARA": {
+                "SEPAKU": 35509
+            }
+        }
+    },
     "ageLabels": [
         "0-4",
         "5-9",
