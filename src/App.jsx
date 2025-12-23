@@ -198,7 +198,7 @@ const KPICard = memo(({ title, value, icon: Icon, colorClass, onClick }) => (
 ));
 
 const Header = ({ t, lang, setLang, onRefresh, isRefreshing, activeTab, setActiveTab }) => (
-  <header className="mb-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 border-b border-slate-200/60 pb-8 px-8">
+  <header className="mb-6 md:mb-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 border-b border-slate-200/60 pb-8 px-4 md:px-8">
     <div className="flex items-center gap-6">
       <img src="/logoiknnotext.png" alt="IKN Logo" className="w-14 h-14 object-contain" width="56" height="56" />
       <nav className="flex items-center bg-slate-100/80 p-1.5 rounded-2xl backdrop-blur-sm border border-slate-200/50 shadow-inner">
@@ -299,11 +299,11 @@ const MethodologyView = ({ t, lang }) => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-700 px-8">
+    <div className="max-w-7xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-700 px-4 md:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {content.map((item, i) => (
           <Reveal key={i} delay={i * 50}>
-            <div className="bg-white border border-slate-200 rounded-3xl p-8 shadow-sm hover:shadow-md transition-all h-full flex flex-col">
+            <div className="bg-white border border-slate-200 rounded-3xl p-5 md:p-8 shadow-sm hover:shadow-md transition-all h-full flex flex-col">
               <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
               {item.subtitle && <p className="text-indigo-600 font-bold text-sm mb-4">{item.subtitle}</p>}
               {item.text && <p className="text-slate-600 leading-relaxed mb-4">{item.text}</p>}
@@ -326,8 +326,8 @@ const MethodologyView = ({ t, lang }) => {
 };
 
 const AboutView = ({ t }) => (
-  <div className="max-w-7xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-700 px-8">
-    <div className="bg-white border border-slate-200 rounded-[2.5rem] p-16 text-center shadow-sm">
+  <div className="max-w-7xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-700 px-4 md:px-8">
+    <div className="bg-white border border-slate-200 rounded-[2.5rem] p-6 md:p-16 text-center shadow-sm">
       <div className="w-24 h-24 bg-indigo-50 rounded-3xl flex items-center justify-center mx-auto mb-8">
         <Building2 className="w-12 h-12 text-indigo-600" />
       </div>
@@ -457,13 +457,13 @@ const App = () => {
       <Header t={t} lang={lang} setLang={setLang} onRefresh={fetchData} isRefreshing={isRefreshing} activeTab={activeTab} setActiveTab={setActiveTab} />
 
       {activeTab === 'dashboard' && (
-        <main className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-in fade-in slide-in-from-bottom-4 duration-700 px-8">
+        <main className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-in fade-in slide-in-from-bottom-4 duration-700 px-4 md:px-8">
           <Reveal><KPICard title={t.totalPop} value={summary?.total_population?.toLocaleString()} icon={Users} colorClass="bg-blue-600" onClick={() => setActiveModal('pop')} /></Reveal>
           <Reveal delay={100}><KPICard title={t.totalHH} value={summary?.total_households?.toLocaleString()} icon={Home} colorClass="bg-indigo-600" onClick={() => setActiveModal('hh')} /></Reveal>
           <Reveal delay={200}><KPICard title={t.depRatio} value={`${summary?.dependency_ratio || 0}%`} icon={TrendingUp} colorClass="bg-amber-600" onClick={() => setActiveModal('dep')} /></Reveal>
 
           <Reveal className="lg:col-span-2">
-            <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-8 h-full flex flex-col">
+            <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-5 md:p-8 h-full flex flex-col">
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
                 <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
                   <Activity className="text-sky-500" /> {t.popPyramid}
@@ -523,16 +523,16 @@ const App = () => {
           </Reveal>
 
           <Reveal delay={100}>
-            <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-8 flex flex-col justify-center space-y-8 text-center h-full">
+            <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-5 md:p-8 flex flex-col justify-center space-y-8 text-center h-full">
               <button onClick={() => setActiveModal('age')} className="hover:bg-slate-50 p-4 rounded-xl transition-all group cursor-pointer">
                 <p className="text-slate-500 text-sm font-bold uppercase tracking-widest mb-1 group-hover:text-indigo-600 cursor-pointer">{t.agingIndex}</p>
-                <p className="text-5xl font-black text-slate-800 cursor-pointer">{summary.aging_index}</p>
+                <p className="text-4xl md:text-5xl font-black text-slate-800 cursor-pointer">{summary.aging_index}</p>
                 <p className="text-xs text-slate-400 mt-2 cursor-pointer">{t.agingDesc}</p>
               </button>
               <div className="border-t border-slate-100 pt-8">
                 <button onClick={() => setActiveModal('sex')} className="hover:bg-slate-50 p-4 rounded-xl transition-all group w-full cursor-pointer">
                   <p className="text-slate-500 text-sm font-bold uppercase tracking-widest mb-1 group-hover:text-indigo-600 cursor-pointer">{t.sexRatio}</p>
-                  <p className="text-5xl font-black text-slate-800 cursor-pointer">{summary.sex_ratio}</p>
+                  <p className="text-4xl md:text-5xl font-black text-slate-800 cursor-pointer">{summary.sex_ratio}</p>
                   <p className="text-xs text-slate-400 mt-2 cursor-pointer">{summary.sex_ratio}:100 {t.sexRatioDesc}</p>
                 </button>
               </div>
@@ -540,7 +540,7 @@ const App = () => {
           </Reveal>
 
           <Reveal className="lg:col-span-3">
-            <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-8 grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-5 md:p-8 grid grid-cols-1 lg:grid-cols-4 gap-8">
               <div className="lg:col-span-3">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-2">
                   <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2"><Briefcase className="text-indigo-500" /> {t.econTitle}</h2>
@@ -576,7 +576,7 @@ const App = () => {
           </Reveal>
 
           <Reveal className="lg:col-span-3">
-            <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-8">
+            <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-5 md:p-8">
               <div className="flex justify-between items-center mb-10">
                 <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
                   <Building2 className="text-indigo-500" /> {t.adminIntel}
@@ -681,7 +681,7 @@ const App = () => {
 
           <Reveal className="lg:col-span-3">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 auto-rows-fr">
-              <div className="lg:col-span-2 bg-white border border-slate-200 rounded-2xl shadow-sm p-8 flex flex-col h-full relative">
+              <div className="lg:col-span-2 bg-white border border-slate-200 rounded-2xl shadow-sm p-5 md:p-8 flex flex-col h-full relative">
                 <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2 mb-1"><MapPin className="text-indigo-500" /> {t.spatialMapTitle}</h2>
                 <p className="text-slate-400 text-sm mb-6">{t.spatialMapDesc}</p>
                 <div className="flex-grow w-full rounded-xl border border-slate-200 overflow-hidden shadow-inner relative min-h-[460px]">
@@ -707,7 +707,7 @@ const App = () => {
                 </div>
               </div>
 
-              <div className="bg-slate-900 rounded-2xl p-8 text-white flex flex-col shadow-xl h-full">
+              <div className="bg-slate-900 rounded-2xl p-5 md:p-8 text-white flex flex-col shadow-xl h-full">
                 <div className="mb-10">
                   <h3 className="text-2xl font-bold mb-6 flex items-center gap-2"><Layers className="text-indigo-400" /> {t.spatialTitle}</h3>
 
